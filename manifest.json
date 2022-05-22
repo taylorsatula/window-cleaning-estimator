@@ -1,0 +1,16 @@
+{
+  "name": "Quote-A-Customer",
+  "short_name": "Quote Em'",
+  "lang": "en-US",
+  "start_url": "/quote/",
+  "scope": "/quote/",
+  "display": "standalone",
+  "theme_color": "#000",
+  "icons": [
+    {
+      "src": "apple-touch-icon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

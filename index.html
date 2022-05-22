@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Quote Em' by Rocket City Window Cleaning</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="style.css" type=text/css>
+        <link rel="manifest" href="/quote/manifest.json">
+
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="application-name" content="Quote Em' by Rocket City Window Cleaning">
+        <meta name="apple-mobile-web-app-title" content="Quote Em' by Rocket City Window Cleaning">
+        <meta name="theme-color" content="#000">
+        <meta name="msapplication-navbutton-color" content="#000">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+        <link rel="icon" type="image/png" sizes="512x512" href="apple-touch-icon.png">
+        <link rel="apple-touch-icon" type="image/png" sizes="512x512" href="apple-touch-icon.png">
+    </head>
+    <body>
+        <h1><a href="https://www.rocketcitywindowcleaning.com/">Quote-A-<br />Customer</a></h1>
+        <form action="/quote/post.php" method="POST">
+            <ul>
+                <li><label for="distanceMiles">Distance <small>(Miles)</small></label>                         <input type="text" pattern="\d*" id="distanceMiles" placeholder="0" name="distanceMiles"></li>
+                    <li><label for="windowsGround">Windows <small>(Ground)</small></label>                     <input type="text" pattern="\d*" id="windowsGround" placeholder="0" name="windowsGround"></li>
+                    <li><label for="windowsStep">Windows <small>(Step)</small></label>                         <input type="text" pattern="\d*" id="windowsStep" placeholder="0" name="windowsStep"></li>
+                    <li><label for="windowsLadder">Windows <small>(Ladder)</small></label>                     <input type="text" pattern="\d*" id="windowsLadder" placeholder="0" name="windowsLadder"></li>
+                    <li><label for="windowsTransom">Windows <small>(Transom)</small></label>                   <input type="text" pattern="\d*" id="windowsTransom" placeholder="0" name="windowsTransom"></li>
+                    <li><label for="windowsStorm">Windows <small>(Storm)</small></label>                       <input type="text" pattern="\d*" id="windowsStorm" placeholder="0" name="windowsStorm"></li>
+                    <li><label for="screenCovering">Screens</label>                                            <input type="text" pattern="\d*" id="screenCovering" placeholder="0" name="screenCovering"></li>
+                    <li><label for="guttersWalkable">Gutters<sup>ft</sup> <small>(Walkable)</small></label>    <input type="text" pattern="\d*" id="guttersWalkable" placeholder="0" name="guttersWalkable"></li>                                        
+                    <a id="expansionToggle" href="#" onclick="toggle('other');">+</a>
+                    <div id="other">
+                        <!-- 
+                        <li><label for="cutUpPanels">Cut-up panels</label>                                         <input type="text" pattern="\d*" id="cutUpPanels" placeholder="0" name="cutUpPanels"></li>
+                        <li><label for="cutUpsPerPanel">Cut-ups per panel</label>                                  <input type="text" pattern="\d*" id="cutUpsPerPanel" placeholder="0" name="cutUpsPerPanel"></li>
+                        -->
+                        <li><label for="guttersSteep">Gutters<sup>ft</sup> <small>(Steep)</small></label>          <input type="text" pattern="\d*" id="guttersSteep" placeholder="0" name="guttersSteep"></li>
+                        <li><label for="rentEquipment">Rent Equipment</label>                                      <input type="text" pattern="\d*" id="rentEquipment" placeholder="0" name="rentEquipment"></li>
+                        <li id="difficulty">
+                            <input type="radio" id="modifierMILD" name="modifierValue" value="MILD"><label for="modifierMILD">MILD</label>
+                            <input type="radio" id="modifierNORMAL" name="modifierValue" value="NORMAL" checked><label for="modifierNORMAL">NORMAL</label>
+                            <input type="radio" id="modifierTHRASHED" name="modifierValue" value="THRASHED"><label for="modifierTHRASHED">THRASHED</label>
+                        </li>
+                    </div>
+                </li>
+            <button type="submit" name="Submit">Submit the form!</button>
+        </form>
+
+        <script>
+            function toggle(id) {
+                var state = document.getElementById(id).style.display;
+                if (state == "block") {
+                    document.getElementById('expansionToggle').style.backgroundColor = "black";
+                    document.getElementById('expansionToggle').innerHTML = "+";
+                    document.getElementById('expansionToggle').style.color = "white";
+                    document.getElementById(id).style.display = "none";
+                } else {
+                    document.getElementById('expansionToggle').style.backgroundColor = "white";
+                    document.getElementById('expansionToggle').innerHTML = "-";
+                    document.getElementById('expansionToggle').style.color = "black";
+                    document.getElementById(id).style.display = "block";
+                }
+            }
+        </script>
+    </body>
+<!-- 
+
+     .... NO! ...                  ... MNO! ...
+   ..... MNO!! ...................... MNNOO! ...
+ ..... MMNO! ......................... MNNOO!! .
+.... MNOONNOO!   MMMMMMMMMMPPPOII!   MNNO!!!! .
+ ... !O! NNO! MMMMMMMMMMMMMPPPOOOII!! NO! ....
+    ...... ! MMMMMMMMMMMMMPPPPOOOOIII! ! ...
+   ........ MMMMMMMMMMMMPPPPPOOOOOOII!! .....
+   ........ MMMMMOOOOOOPPPPPPPPOOOOMII! ...  
+    ....... MMMMM..    OPPMMP    .,OMI! ....
+     ...... MMMM::   o.,OPMP,.o   ::I!! ...
+         .... NNM:::.,,OOPM!P,.::::!! ....
+          .. MMNNNNNOOOOPMO!!IIPPO!!O! .....
+         ... MMMMMNNNNOO:!!:!!IPPPPOO! ....
+           .. MMMMMNNOOMMNNIIIPPPOO!! ......
+          ...... MMMONNMMNNNIIIOO!..........
+       ....... MN MOMMMNNNIIIIIO! OO ..........
+    ......... MNO! IiiiiiiiiiiiI OOOO ...........
+  ...... NNN.MNO! . O!!!!!!!!!O . OONO NO! ........
+   .... MNNNNNO! ...OOOOOOOOOOO .  MMNNON!........
+   ...... MNNNNO! .. PPPPPPPPP .. MMNON!........
+      ...... OO! ................. ON! .......
+         ................................
+
+-->
+
+</html>

@@ -10,6 +10,13 @@ I count up the windows and read the customer the price. If I lose it I lose it b
 
 ========================================
 
+HOW TO DEPLOY:
+Replace all values in variables.php marked with [BLANK]
+All calculations downstream of those values should work as long as your numbers make sense.
+The result is more complex than windows*price. It takes your overhead into account. Tweak your numbers up and down slightly to taste.
+
+========================================
+
 CONTRIBUTIONS:
 I am actively soliciting contributions. If you have an idea and you can help make it come true please post an issue in the repo.
 
