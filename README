@@ -7,13 +7,14 @@ A public release of my homebuilt window cleaning pwa.
 It has helped be become rigidly consistant in my pricing. 
 
 I count up the windows and read the customer the price. If I lose it I lose it but I produce consistant results now.
-
 ========================================
 
 HOW TO DEPLOY:
 Replace all values in variables.php marked with [BLANK]
-All calculations downstream of those values should work as long as your numbers make sense.
-The result is more complex than windows*price. It takes your overhead into account. Tweak your numbers up and down slightly to taste.
+  ---All calculations downstream of those values should work as long as your numbers make sense.
+  ---The result is more complex than windows*price. It takes your overhead into account. Tweak your numbers up and down slightly to taste.
+  
+Use a tally app to count up the windows. I suggest using one tally per type word-for-word from the calculator in the same order so you can copy it over easily
 
 ========================================
 
